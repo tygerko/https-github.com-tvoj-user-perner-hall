@@ -1,0 +1,137 @@
+:root {
+  --clr-bg: #0f0f0f;
+  --clr-surface: #161616;
+  --clr-surface2: #1e1e1e;
+  --clr-gold: #c4a26a;
+  --clr-gold-light: #dcc49a;
+  --clr-text: #e8e4de;
+  --clr-text-dim: #8a867f;
+  --clr-text-muted: #5c5954;
+  --clr-border: rgba(196, 162, 106, 0.15);
+  --clr-border-dim: rgba(255, 255, 255, 0.06);
+
+  --font: 'Montserrat', sans-serif;
+
+  --ease: cubic-bezier(.4, 0, .2, 1);
+  --dur: .35s;
+
+  --max-w: 1320px;
+  --nav-h: 72px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--clr-bg);
+  color: var(--clr-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+.label {
+  display: inline-block;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--clr-gold);
+}
+
+.section-pad {
+  padding-block: 7rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .85rem 2.2rem;
+  font-family: var(--font);
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: background var(--dur) var(--ease),
+    color var(--dur) var(--ease),
+    border-color var(--dur) var(--ease),
+    transform var(--dur) var(--ease);
+}
+
+.btn:active {
+  transform: scale(.97);
+}
+
+.btn--gold {
+  background: var(--clr-gold);
+  color: #0f0f0f;
+}
+
+.btn--gold:hover {
+  background: var(--clr-gold-light);
+}
+
+.btn--outline {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, .35);
+}
+
+.btn--outline:hover {
+  border-color: var(--clr-gold);
+  color: var(--clr-gold);
+}
+
+.btn--gold-outline {
+  background: transparent;
+  color: var(--clr-gold);
+  border: 1px solid var(--clr-gold);
+}
+
+.btn--gold-outline:hover {
+  background: var(--clr-gold);
+  color: #0f0f0f;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,38 @@
+.trust {
+    padding: 2.2rem 0;
+    border-top: 1px solid var(--clr-border-dim);
+    border-bottom: 1px solid var(--clr-border-dim);
+    background: var(--clr-surface);
+}
+
+.trust__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.5rem;
+    flex-wrap: wrap;
+}
+
+.trust__label {
+    font-size: .72rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--clr-text-muted);
+}
+
+.trust__logos {
+    display: flex;
+    align-items: center;
+    gap: 2.8rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.trust__logo--text {
+    font-size: .72rem;
+    font-weight: 600;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--clr-text-muted);
+    opacity: .4;
+}

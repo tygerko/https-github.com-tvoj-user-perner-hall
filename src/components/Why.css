@@ -1,0 +1,65 @@
+.why {
+    background: var(--clr-bg);
+}
+
+.why__header {
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.why__header .label {
+    margin-bottom: 1rem;
+}
+
+.why__header h2 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 300;
+    letter-spacing: -.02em;
+}
+
+.why__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+.why__card {
+    background: var(--clr-surface);
+    border: 1px solid var(--clr-border-dim);
+    padding: 2.4rem 2rem;
+    transition: border-color var(--dur) var(--ease),
+        transform var(--dur) var(--ease);
+}
+
+.why__card:hover {
+    border-color: var(--clr-border);
+    transform: translateY(-4px);
+}
+
+.why__icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-gold);
+}
+
+.why__icon svg {
+    width: 36px;
+    height: 36px;
+}
+
+.why__card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: .7rem;
+    letter-spacing: -.01em;
+}
+
+.why__card p {
+    font-size: .9rem;
+    color: var(--clr-text-dim);
+    line-height: 1.65;
+}

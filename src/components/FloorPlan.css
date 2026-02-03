@@ -1,0 +1,65 @@
+.floorplan {
+    background: var(--clr-surface);
+    border-top: 1px solid var(--clr-border-dim);
+    border-bottom: 1px solid var(--clr-border-dim);
+}
+
+.floorplan__header {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.floorplan__header .label {
+    margin-bottom: 1rem;
+}
+
+.floorplan__header h2 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 300;
+}
+
+.floorplan__wrapper {
+    position: relative;
+    background: #1a1a18;
+    border: 1px solid var(--clr-border-dim);
+    overflow: hidden;
+}
+
+.floorplan__img {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: .92;
+}
+
+.floorplan__legend {
+    display: flex;
+    justify-content: center;
+    gap: 2.4rem;
+    flex-wrap: wrap;
+    padding: 1.6rem 2rem;
+    border-top: 1px solid var(--clr-border-dim);
+    background: var(--clr-surface2);
+}
+
+.floorplan__legend-item {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    font-size: .78rem;
+    font-weight: 500;
+    color: var(--clr-text-dim);
+    letter-spacing: .06em;
+    text-transform: uppercase;
+}
+
+.floorplan__dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 2px;
+}
+
+.floorplan__actions {
+    margin-top: 2.2rem;
+    text-align: center;
+}

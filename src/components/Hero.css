@@ -1,0 +1,88 @@
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero__bg {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(170deg, rgba(10, 8, 5, .94) 0%, rgba(12, 9, 6, .68) 35%, rgba(15, 10, 6, .78) 55%, rgba(18, 12, 7, .85) 72%, rgba(10, 8, 5, .94) 100%),
+        url('/assets/venue-main.jpg') center/cover no-repeat;
+    z-index: 0;
+}
+
+.hero__accent {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--clr-gold), transparent);
+    z-index: 2;
+}
+
+.hero__content {
+    position: relative;
+    z-index: 1;
+    max-width: 780px;
+    padding-inline: 2rem;
+}
+
+.hero__label {
+    margin-bottom: 1.6rem;
+    opacity: 0;
+    animation: fadeUp .8s .2s var(--ease) forwards;
+}
+
+.hero__title {
+    font-size: clamp(3rem, 8vw, 6.5rem);
+    font-weight: 300;
+    letter-spacing: -.03em;
+    line-height: 1.05;
+    color: #fff;
+    margin-bottom: 1.8rem;
+    opacity: 0;
+    animation: fadeUp .9s .35s var(--ease) forwards;
+    text-shadow: 0 4px 24px rgba(0, 0, 0, .6), 0 1px 6px rgba(0, 0, 0, .4);
+}
+
+.hero__title em {
+    font-style: normal;
+    color: var(--clr-gold);
+}
+
+.hero__desc {
+    font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+    color: rgba(255, 255, 255, .95);
+    font-weight: 400;
+    max-width: 580px;
+    margin-inline: auto;
+    margin-bottom: 2.8rem;
+    opacity: 0;
+    animation: fadeUp 1s .5s var(--ease) forwards;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, .7), 0 1px 4px rgba(0, 0, 0, .5);
+    line-height: 1.75;
+    letter-spacing: 0.01em;
+}
+
+.hero__btns {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeUp 1s .65s var(--ease) forwards;
+}
+
+@media (max-width: 768px) {
+    .hero__title {
+        font-size: 3.5rem;
+    }
+}
