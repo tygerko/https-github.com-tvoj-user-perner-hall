@@ -70,15 +70,27 @@ const Footer = () => {
                                     Tram 8, 14 – zastávka <strong style={{ color: 'var(--clr-text)' }}>Palmovka</strong></p>
                             </div>
                             <div className="contact__map-wrap" id="mapWrap">
-                                <iframe
-                                    id="mapIframe"
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.18!2d14.4867!3d50.0934!0m3!2f0!3f0!3f0!3m2!1e3!4b1!4m5!1s0x4700efc537ac6845%3A0x1!2sPernerova+8%2C+170+00+Praha!3e0!5m2!0e0!0e1"
-                                    allowFullScreen=""
-                                    loading="lazy"
-                                    referrerPolicy="no-referrer-when-downgrade"
-                                    title="Perner Hall – Pernerová 8, Praha"
-                                    style={{ opacity: 1 }}
-                                ></iframe>
+                                {import.meta.env.VITE_GOOGLE_MAPS_API_KEY ? (
+                                    <iframe
+                                        id="mapIframe"
+                                        src={`https://www.google.com/maps/embed/v1/place?key=${import.meta.env.VITE_GOOGLE_MAPS_API_KEY}&q=Pernerova+8,Prague`}
+                                        allowFullScreen=""
+                                        loading="lazy"
+                                        referrerPolicy="no-referrer-when-downgrade"
+                                        title="Perner Hall – Pernerová 8, Praha"
+                                        style={{ opacity: 1 }}
+                                    ></iframe>
+                                ) : (
+                                    <iframe
+                                        id="mapIframe"
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.18!2d14.4867!3d50.0934!0m3!2f0!3f0!3f0!3m2!1e3!4b1!4m5!1s0x4700efc537ac6845%3A0x1!2sPernerova+8%2C+170+00+Praha!3e0!5m2!0e0!0e1"
+                                        allowFullScreen=""
+                                        loading="lazy"
+                                        referrerPolicy="no-referrer-when-downgrade"
+                                        title="Perner Hall – Pernerová 8, Praha"
+                                        style={{ opacity: 1 }}
+                                    ></iframe>
+                                )}
                             </div>
                         </div>
                     </div>
