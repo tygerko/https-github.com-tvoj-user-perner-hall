@@ -11,19 +11,19 @@ const Gallery = () => {
                 </div>
                 <div className="gallery__grid">
                     <div className="gallery__item">
-                        <img src="/assets/venue-main.jpg" alt="Perner Hall – conference" />
+                        <img src="/assets/venue-main.jpg" alt="PernerHall – conference" />
                     </div>
                     <div className="gallery__item">
-                        <img src="/assets/venue-main.jpg" alt="Perner Hall – detail svetla" style={{ objectPosition: '70% center' }} />
+                        <img src="/assets/venue-main.jpg" alt="PernerHall – detail svetla" style={{ objectPosition: '70% center' }} />
                     </div>
                     <div className="gallery__item">
-                        <img src="/assets/venue-main.jpg" alt="Perner Hall – architektúra" style={{ objectPosition: '20% top' }} />
+                        <img src="/assets/venue-main.jpg" alt="PernerHall – architektúra" style={{ objectPosition: '20% top' }} />
                     </div>
                     <div className="gallery__item">
                         <img src="/assets/floor-plan.jpg" alt="PK8 Floor Plan" style={{ objectPosition: 'center 40%' }} />
                     </div>
                     <div className="gallery__item">
-                        <img src="/assets/venue-main.jpg" alt="Perner Hall – detail" style={{ objectPosition: '50% bottom' }} />
+                        <img src="/assets/venue-main.jpg" alt="PernerHall – detail" style={{ objectPosition: '50% bottom' }} />
                     </div>
                 </div>
             </div>

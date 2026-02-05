@@ -10,7 +10,7 @@ const whyData = [
                 <path d="M12 6V4M24 6V4" />
             </svg>
         ),
-        title: 'Multifunkční Perner Hall',
+        title: 'Multifunkční PernerHall',
         desc: 'Kapacita až 300 osob v divatelním uspořádání – hlavní sál pro konference, prezentace i gala.'
     },
     {
@@ -74,8 +74,8 @@ const Why = () => {
         <section className="why section-pad" id="why">
             <div className="container">
                 <div className="why__header">
-                    <div className="label">Proč Perner Karlín</div>
-                    <h2>Komplex pro nezapomenutatelné eventy</h2>
+                    <div className="label">Proč PernerKarlín</div>
+                    <h2>Prostor pro nezapomenutelné eventy</h2>
                 </div>
                 <div className="why__grid">
                     {whyData.map((item, index) => (

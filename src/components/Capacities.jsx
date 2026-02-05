@@ -3,7 +3,7 @@ import './Capacities.css';
 
 const capsData = [
     {
-        title: '🎭 Hlavní sál – Perner Hall',
+        title: '🎭 Hlavní sál – PernerHall',
         rows: [
             { label: 'Divadlo (theater)', val: 'až 300 osob' },
             { label: 'Školní uspořádání', val: 'až 150 osob' },
@@ -12,7 +12,7 @@ const capsData = [
         ]
     },
     {
-        title: '🌐 Experience Event Floor',
+        title: '🌐 PernerExperience eventové patro',
         rows: [
             { label: 'Celková kapacita', val: 'až 700 osob' },
             { label: 'Paralelní programy', val: '✓' },

@@ -7,10 +7,12 @@ const Hero = ({ onOpenModal }) => {
             <div className="hero__bg"></div>
             <div className="hero__content">
                 <div className="hero__label label">Scott Weber Workspace · Prague</div>
-                <h1 className="hero__title">Perner<br /><em>Hall</em></h1>
+                <h1 className="hero__title">
+                    PernerExperience
+                    <span className="hero__subtitle">by Scott.Weber Workspace</span>
+                </h1>
                 <p className="hero__desc">
-                    Ikonické prožitkové eventové prostředí s kapacitou až 500 hostů.
-                    AI-ready experience ekosystém pro maximální zapojení všech účastníků.
+                    PernerKarlín by Scott.Weber nabízí ikonické eventové prostředí pro nezapomenutelné zážitky s kapacitou až 700 hostů, kde se technologie a zážitek spojují v AI-ready prostředí pro maximální zapojení každého účastníka.
                 </p>
                 <div className="hero__btns">
                     <button className="btn btn--gold" onClick={onOpenModal}>Zkontrolovat dostupnost</button>

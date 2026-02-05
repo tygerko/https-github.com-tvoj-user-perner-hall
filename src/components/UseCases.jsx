@@ -16,7 +16,7 @@ const UseCases = () => {
             <div className="container">
                 <div className="usecases__header">
                     <div className="label">Typy eventů</div>
-                    <h2>Pro jaké akce jsme here</h2>
+                    <h2>Jaké zážitky u nás můžete vytvořit?</h2>
                 </div>
                 <div className="usecases__grid">
                     {uiCases.map((item, idx) => (

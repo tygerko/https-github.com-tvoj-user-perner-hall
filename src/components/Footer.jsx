@@ -62,7 +62,7 @@ const Footer = () => {
                             </div>
                             <div className="contact__block">
                                 <h4>Lokalita</h4>
-                                <p>Perner Hall<br />Pernerová 8<br />170 00 Praha – Karlín</p>
+                                <p>PernerHall<br />Pernerová 8<br />170 00 Praha – Karlín</p>
                             </div>
                             <div className="contact__block">
                                 <h4>MHD</h4>
@@ -70,6 +70,15 @@ const Footer = () => {
                                     Tram 8, 14 – zastávka <strong style={{ color: 'var(--clr-text)' }}>Palmovka</strong></p>
                             </div>
                             <div className="contact__map-wrap" id="mapWrap">
+                                {/* Static map preview while API key is being set up */}
+                                <div className="map-placeholder" style={{ width: '100%', height: '100%', background: '#1a1a1a', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', borderRadius: '12px' }}>
+                                    <img
+                                        src="/assets/map-preview.png"
+                                        alt="PernerHall Area Map Preview"
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 1 }}
+                                    />
+                                </div>
+                                {/* 
                                 {import.meta.env.VITE_GOOGLE_MAPS_API_KEY ? (
                                     <iframe
                                         id="mapIframe"
@@ -77,20 +86,11 @@ const Footer = () => {
                                         allowFullScreen=""
                                         loading="lazy"
                                         referrerPolicy="no-referrer-when-downgrade"
-                                        title="Perner Hall – Pernerová 8, Praha"
+                                        title="PernerHall – Pernerová 8, Praha"
                                         style={{ opacity: 1 }}
                                     ></iframe>
-                                ) : (
-                                    <iframe
-                                        id="mapIframe"
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.18!2d14.4867!3d50.0934!0m3!2f0!3f0!3f0!3m2!1e3!4b1!4m5!1s0x4700efc537ac6845%3A0x1!2sPernerova+8%2C+170+00+Praha!3e0!5m2!0e0!0e1"
-                                        allowFullScreen=""
-                                        loading="lazy"
-                                        referrerPolicy="no-referrer-when-downgrade"
-                                        title="Perner Hall – Pernerová 8, Praha"
-                                        style={{ opacity: 1 }}
-                                    ></iframe>
-                                )}
+                                ) : null}
+                                */}
                             </div>
                         </div>
                     </div>

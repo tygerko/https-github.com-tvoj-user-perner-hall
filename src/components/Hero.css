@@ -53,9 +53,14 @@
     text-shadow: 0 4px 24px rgba(0, 0, 0, .6), 0 1px 6px rgba(0, 0, 0, .4);
 }
 
-.hero__title em {
+.hero__subtitle {
+    display: block;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
     font-style: normal;
     color: var(--clr-gold);
+    margin-top: 0.5rem;
+    line-height: 1.2;
+    white-space: nowrap;
 }
 
 .hero__desc {
