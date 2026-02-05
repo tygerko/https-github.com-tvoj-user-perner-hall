@@ -101,7 +101,9 @@ const Footer = () => {
                 <div className="container">
                     <div className="footer__inner">
                         <span className="footer__copy">© 2025 Scott Weber Workspace. All rights reserved.</span>
-                        <span className="footer__logo">SCOTT.<span>WEBER</span></span>
+                        <span className="footer__logo">
+                            <img src="/assets/logo-scott-weber.png" alt="Scott.Weber Workspace" style={{ height: '24px', width: 'auto' }} />
+                        </span>
                     </div>
                 </div>
             </footer>

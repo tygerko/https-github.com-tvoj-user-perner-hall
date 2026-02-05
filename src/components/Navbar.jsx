@@ -19,7 +19,9 @@ const Navbar = ({ onOpenModal }) => {
     return (
         <nav className="nav" id="nav">
             <div className="nav__inner">
-                <a href="#" className="nav__logo">SCOTT.<span>WEBER</span></a>
+                <a href="#" className="nav__logo">
+                    <img src="/assets/logo-scott-weber.png" alt="Scott.Weber Workspace Logo" className="nav__logo-img" />
+                </a>
                 <ul className={`nav__links ${isOpen ? 'open' : ''}`} id="navLinks">
                     <li><a href="#why" onClick={() => setIsOpen(false)}>Venue</a></li>
                     <li><a href="#floorplan" onClick={() => setIsOpen(false)}>Floor Plan</a></li>

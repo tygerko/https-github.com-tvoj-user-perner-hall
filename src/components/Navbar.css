@@ -1,6 +1,7 @@
 .nav {
     position: fixed;
-    inset-x: 0;
+    left: 0;
+    right: 0;
     top: 0;
     z-index: 900;
     width: 100%;
@@ -25,15 +26,19 @@
 }
 
 .nav__logo {
-    font-size: .95rem;
-    font-weight: 700;
-    letter-spacing: .12em;
-    color: var(--clr-text);
+    display: flex;
+    align-items: center;
     justify-self: start;
 }
 
-.nav__logo span {
-    color: var(--clr-gold);
+.nav__logo-img {
+    height: 34px;
+    width: auto;
+    transition: opacity var(--dur) var(--ease);
+}
+
+.nav__logo:hover .nav__logo-img {
+    opacity: .85;
 }
 
 .nav__links {
