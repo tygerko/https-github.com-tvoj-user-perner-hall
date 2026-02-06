@@ -6,7 +6,6 @@ const Hero = ({ onOpenModal }) => {
         <section className="hero">
             <div className="hero__bg"></div>
             <div className="hero__content">
-                <div className="hero__label label">Scott Weber Workspace · Prague</div>
                 <h1 className="hero__title">
                     PernerExperience
                     <span className="hero__subtitle">by Scott.Weber Workspace</span>
@@ -15,8 +14,8 @@ const Hero = ({ onOpenModal }) => {
                     PernerKarlín by Scott.Weber nabízí ikonické eventové prostředí pro nezapomenutelné zážitky s kapacitou až 700 hostů, kde se technologie a zážitek spojují v AI-ready prostředí pro maximální zapojení každého účastníka.
                 </p>
                 <div className="hero__btns">
-                    <button className="btn btn--gold" onClick={onOpenModal}>Zkontrolovat dostupnost</button>
-                    <a href="#floorplan" className="btn btn--outline">Zobrazit půdorys</a>
+                    <button className="btn btn--gold" onClick={onOpenModal}>KONTAKTUJTE NÁS</button>
+                    <a href="#floorplan" className="btn btn--outline">ZOBRAZIT SPACEPLANE</a>
                 </div>
             </div>
             <div className="hero__accent"></div>

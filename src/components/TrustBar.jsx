@@ -8,11 +8,13 @@ const TrustBar = () => {
                 <div className="trust__inner">
                     <span className="trust__label">Důvěřují nám</span>
                     <div className="trust__logos">
-                        <span className="trust__logo--text">TOYOTA</span>
-                        <span className="trust__logo--text">PORSCHE</span>
-                        <span className="trust__logo--text">DELOITTE</span>
-                        <span className="trust__logo--text">ALLIANZ</span>
-                        <span className="trust__logo--text">SIEMENS</span>
+                        <span className="trust__logo--text">VISA</span>
+                        <span className="trust__logo--text">BOLT</span>
+                        <span className="trust__logo--text">EY</span>
+                        <span className="trust__logo--text">HAVEL & PARTNERS</span>
+                        <span className="trust__logo--text">RAPID 7</span>
+                        <span className="trust__logo--text">ROHLIK</span>
+                        <span className="trust__logo--text">GENERALI</span>
                     </div>
                 </div>
             </div>

@@ -33,6 +33,21 @@
     border-color: var(--clr-border);
 }
 
+.caps__icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-gold);
+}
+
+.caps__icon svg {
+    width: 36px;
+    height: 36px;
+}
+
 .caps__card-title {
     font-size: 1.05rem;
     font-weight: 600;

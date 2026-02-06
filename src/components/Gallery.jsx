@@ -7,7 +7,7 @@ const Gallery = () => {
             <div className="container">
                 <div className="gallery__header">
                     <div className="label">Atmosféra</div>
-                    <h2>Creating memorable moments</h2>
+                    <h2>Vytváříme nezapomenutelné momenty</h2>
                 </div>
                 <div className="gallery__grid">
                     <div className="gallery__item">

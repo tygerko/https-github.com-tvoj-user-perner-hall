@@ -74,8 +74,10 @@ const Why = () => {
         <section className="why section-pad" id="why">
             <div className="container">
                 <div className="why__header">
-                    <div className="label">Proč PernerKarlín</div>
+                    <div className="label">PROČ PERNEREXPERIENCE</div>
                     <h2>Prostor pro nezapomenutelné eventy</h2>
+                    <p style={{ maxWidth: '680px', margin: '1rem auto 0', fontSize: '1.05rem', opacity: 0.9, letterSpacing: '0.05em' }}>VYJÍMEČNÁ LOKALITA – ŠPIČKOVÁ TECHNOLOGIE – JEDINEČNÁ ATMOSFÉRA</p>
+                    <p style={{ maxWidth: '680px', margin: '0.5rem auto 0', fontSize: '1rem', opacity: 0.85 }}>zde proč PERNEREXPERIENCE</p>
                 </div>
                 <div className="why__grid">
                     {whyData.map((item, index) => (

@@ -23,16 +23,16 @@ const Navbar = ({ onOpenModal }) => {
                     <img src="/assets/logo-scott-weber.png" alt="Scott.Weber Workspace Logo" className="nav__logo-img" />
                 </a>
                 <ul className={`nav__links ${isOpen ? 'open' : ''}`} id="navLinks">
-                    <li><a href="#why" onClick={() => setIsOpen(false)}>Venue</a></li>
-                    <li><a href="#floorplan" onClick={() => setIsOpen(false)}>Floor Plan</a></li>
-                    <li><a href="#caps" onClick={() => setIsOpen(false)}>Capacities</a></li>
-                    <li><a href="#gallery" onClick={() => setIsOpen(false)}>Gallery</a></li>
-                    <li><a href="#contact" onClick={() => setIsOpen(false)}>Contact</a></li>
+                    <li><a href="#why" onClick={() => setIsOpen(false)}>PROSTOR</a></li>
+                    <li><a href="#floorplan" onClick={() => setIsOpen(false)}>FLOOR PLAN</a></li>
+                    <li><a href="#caps" onClick={() => setIsOpen(false)}>KAPACITY</a></li>
+                    <li><a href="#gallery" onClick={() => setIsOpen(false)}>GALERIE</a></li>
+                    <li><a href="#contact" onClick={() => setIsOpen(false)}>KONTAKT</a></li>
                     <li className="nav__mobile-cta">
-                        <button onClick={() => { setIsOpen(false); onOpenModal(); }}>Book Now</button>
+                        <button onClick={() => { setIsOpen(false); onOpenModal(); }}>OZVĚTE SE NÁM</button>
                     </li>
                 </ul>
-                <button className="nav__cta" onClick={onOpenModal}>Book Now</button>
+                <button className="nav__cta" onClick={onOpenModal}>OZVĚTE SE NÁM</button>
                 <button className={`nav__burger ${isOpen ? 'active' : ''}`} id="burger" aria-label="Menu" onClick={toggleMenu}>
                     <span></span><span></span><span></span>
                 </button>

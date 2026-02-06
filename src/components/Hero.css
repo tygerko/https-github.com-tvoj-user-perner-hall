@@ -64,7 +64,7 @@
 }
 
 .hero__desc {
-    font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+    font-size: clamp(1.05rem, 2.2vw, 1.5rem);
     color: rgba(255, 255, 255, .95);
     font-weight: 400;
     max-width: 580px;
@@ -75,6 +75,7 @@
     text-shadow: 0 2px 16px rgba(0, 0, 0, .7), 0 1px 4px rgba(0, 0, 0, .5);
     line-height: 1.75;
     letter-spacing: 0.01em;
+    text-align: center;
 }
 
 .hero__btns {
