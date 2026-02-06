@@ -8,31 +8,68 @@
 .trust__inner {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 3.5rem;
-    flex-wrap: wrap;
+    gap: 4rem;
 }
 
 .trust__label {
     font-size: .72rem;
     letter-spacing: .14em;
     text-transform: uppercase;
-    color: var(--clr-text-muted);
+    color: var(--clr-text-dim);
+    white-space: nowrap;
+    z-index: 2;
+    background: var(--clr-surface);
+    padding-right: 2rem;
 }
 
 .trust__logos {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+.trust__logos-track {
     display: flex;
     align-items: center;
-    gap: 2.8rem;
-    flex-wrap: wrap;
-    justify-content: center;
+    gap: 5rem;
+    width: max-content;
+    animation: scroll 40s linear infinite;
 }
 
 .trust__logo--text {
-    font-size: .72rem;
+    font-size: .75rem;
     font-weight: 600;
-    letter-spacing: .15em;
+    letter-spacing: .18em;
     text-transform: uppercase;
-    color: var(--clr-text-muted);
-    opacity: .4;
+    color: var(--clr-text);
+    opacity: .5;
+    transition: opacity var(--dur) var(--ease);
+}
+
+.trust__logo--text:hover {
+    opacity: 1;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .trust__inner {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .trust__label {
+        padding-right: 0;
+    }
 }

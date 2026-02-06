@@ -141,6 +141,12 @@
     }
 }
 
+@media (max-width:480px) {
+    .nav__inner {
+        padding-inline: 1.25rem;
+    }
+}
+
 @media (max-width:780px) {
     .nav__links {
         display: none;
