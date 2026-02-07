@@ -6,44 +6,14 @@
     justify-content: center;
     text-align: center;
     padding: 2rem;
-    color: #fff;
     font-family: var(--font);
 }
 
-.coming-soon__content {
-    max-width: 800px;
-    animation: fadeUp 1s var(--ease) forwards;
-}
-
-.coming-soon__title {
-    font-size: clamp(3rem, 10vw, 6.5rem);
-    font-weight: 300;
-    letter-spacing: -.03em;
-    line-height: 1.05;
-    margin-bottom: 2rem;
-}
-
-.coming-soon__subtitle {
-    display: block;
-    font-size: clamp(1.5rem, 5vw, 3rem);
+.coming-soon__text {
+    font-size: clamp(2rem, 8vw, 4rem);
     color: var(--clr-gold);
-    margin-top: 1rem;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.3em;
     font-weight: 600;
-}
-
-.coming-soon__desc {
-    font-size: clamp(1rem, 2.5vw, 1.25rem);
-    color: rgba(255, 255, 255, 0.7);
-    max-width: 500px;
-    margin: 0 auto 3rem;
-    line-height: 1.6;
-}
-
-.coming-soon__accent {
-    width: 60px;
-    height: 1px;
-    background: var(--clr-gold);
-    margin: 0 auto;
+    animation: fadeUp 1s var(--ease) forwards;
 }
