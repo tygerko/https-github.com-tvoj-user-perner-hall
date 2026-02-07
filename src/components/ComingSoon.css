@@ -14,6 +14,6 @@
     color: var(--clr-gold);
     text-transform: uppercase;
     letter-spacing: 0.3em;
-    font-weight: 600;
+    font-weight: 400;
     animation: fadeUp 1s var(--ease) forwards;
 }
