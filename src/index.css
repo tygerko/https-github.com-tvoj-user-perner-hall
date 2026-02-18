@@ -58,6 +58,12 @@ a {
   padding-inline: 2rem;
 }
 
+@media (max-width: 600px) {
+  .container {
+    padding-inline: 1.25rem;
+  }
+}
+
 .label {
   display: inline-block;
   font-size: .75rem;
@@ -69,6 +75,12 @@ a {
 
 .section-pad {
   padding-block: 7rem;
+}
+
+@media (max-width: 768px) {
+  .section-pad {
+    padding-block: 4.5rem;
+  }
 }
 
 .btn {

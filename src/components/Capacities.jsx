@@ -12,12 +12,12 @@ const capsData = [
                 <circle cx="24" cy="22" r="1.5" fill="currentColor" stroke="none" />
             </svg>
         ),
-        title: 'Hlavní sál – PernerHall',
+        title: 'Hlavní sál – Perner.Hall',
         rows: [
-            { label: 'Divadlo (theater)', val: 'až 300 osob' },
-            { label: 'Školní uspořádání', val: 'až 150 osob' },
-            { label: 'Cocktail / standing', val: 'až 500 osob' },
-            { label: 'Stropní výška', val: '4.2 m' }
+            { label: 'Divadlo', val: '300 osob' },
+            { label: 'Škola', val: '161 osob' },
+            { label: 'Koktejl', val: '81 osob' },
+            { label: 'Gala', val: '240 osob' }
         ]
     },
     {
@@ -28,12 +28,10 @@ const capsData = [
                 <circle cx="18" cy="18" r="4" />
             </svg>
         ),
-        title: 'PernerExperience eventové patro',
+        title: 'Perner.Central',
         rows: [
-            { label: 'Celková kapacita', val: 'až 700 osob' },
-            { label: 'Paralelní programy', val: '✓' },
-            { label: 'Networking zóny', val: '✓' },
-            { label: 'VIP Lounge', val: '✓' }
+            { label: 'Divadlo', val: '70 osob' },
+            { label: 'Škola', val: '36 osob' }
         ]
     },
     {
@@ -45,12 +43,23 @@ const capsData = [
                 <path d="M6 28h24" />
             </svg>
         ),
-        title: 'Privátní zahrada',
+        title: 'Perner.Klub',
         rows: [
-            { label: 'Standing / party', val: 'až 200 osob' },
-            { label: 'Catering zázemí', val: '✓' },
-            { label: 'Evening events', val: '✓' },
-            { label: 'Privátní přístup', val: '✓' }
+            { label: 'Divadlo', val: '70 osob' },
+            { label: 'Škola', val: '36 osob' }
+        ]
+    },
+    {
+        icon: (
+            <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" strokeWidth="1.2">
+                <rect x="6" y="8" width="24" height="20" rx="2" />
+                <path d="M6 14h24M12 28v4M24 28v4" />
+                <circle cx="18" cy="18" r="3" />
+            </svg>
+        ),
+        title: 'Perner.Kino',
+        rows: [
+            { label: 'Kapacita', val: '15 osob' }
         ]
     }
 ];
@@ -61,7 +70,7 @@ const Capacities = () => {
             <div className="container">
                 <div className="caps__header">
                     <div className="label">Kapacity & uspořádání</div>
-                    <h2>možnosti pronájmu/prostorů</h2>
+                    <h2>MOŽNOSTI PROSTORŮ</h2>
                 </div>
                 <div className="caps__grid">
                     {capsData.map((section, idx) => (

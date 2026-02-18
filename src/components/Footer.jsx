@@ -10,7 +10,7 @@ const Footer = () => {
                         {/* Form */}
                         <div className="contact__form-wrap">
                             <div className="label" style={{ marginBottom: '.8rem' }}>Kontakt</div>
-                            <h2>Domluvme se</h2>
+                            <h2>OZVĚTE SE NÁM</h2>
                             <p>Máte otázky nebo chcete naplánovat event? Napíšte nám.</p>
 
                             <form id="contactForm" onSubmit={(e) => { e.preventDefault(); alert('Success! (Mock)'); }}>
@@ -56,18 +56,18 @@ const Footer = () => {
                             <div className="contact__block">
                                 <h4>Kontaktní osoba</h4>
                                 <p><strong style={{ color: 'var(--clr-text)' }}>Petr Svoboda</strong><br />
-                                    Event Manager<br />
+                                    Head of Event Sales & Production<br />
                                     <a href="#">svoboda@scottweber.cz</a><br />
-                                    <a href="tel:+420000000000">+420 000 000 000</a></p>
+                                    <a href="tel:+420724286796">+420 724 286 796</a></p>
                             </div>
                             <div className="contact__block">
                                 <h4>Lokalita</h4>
-                                <p>PernerHall<br />Pernerová 8<br />170 00 Praha – Karlín</p>
+                                <p>PernerKarlín<br />Pernerova 727/40a<br />170 00 Praha – Karlín</p>
                             </div>
                             <div className="contact__block">
                                 <h4>MHD</h4>
-                                <p>Metro C – stanice <strong style={{ color: 'var(--clr-text)' }}>Palmovka</strong> (3 min pěšky)<br />
-                                    Tram 8, 14 – zastávka <strong style={{ color: 'var(--clr-text)' }}>Palmovka</strong></p>
+                                <p>Metro C – stanice <strong style={{ color: 'var(--clr-text)' }}>Křižíkova</strong> (3 min pěšky)<br />
+                                    Tram 8, 14 – zastávka <strong style={{ color: 'var(--clr-text)' }}>Křižíkova</strong></p>
                             </div>
                             <div className="contact__map-wrap" id="mapWrap">
                                 {/* Static map preview while API key is being set up */}

@@ -7,7 +7,7 @@ const FloorPlan = () => {
             <div className="container">
                 <div className="floorplan__header">
                     <div className="label">Prostorová dispozice</div>
-                    <h2>Zde SPACE PLANE</h2>
+                    <h2>SPACE PLANE</h2>
                 </div>
                 <div className="floorplan__wrapper">
                     <img className="floorplan__img" src="/assets/floor-plan.jpg" alt="3D Floor Plan – PK8 Pernerova" />
@@ -25,9 +25,6 @@ const FloorPlan = () => {
                             <div className="floorplan__dot" style={{ background: '#9a9590' }}></div> Support
                         </div>
                     </div>
-                </div>
-                <div className="floorplan__actions">
-                    <a href="#" className="btn btn--gold-outline" onClick={(e) => { e.preventDefault(); alert('PDF download – placeholder'); }}>⬇ Stáhnout spaceplane</a>
                 </div>
             </div>
         </section>

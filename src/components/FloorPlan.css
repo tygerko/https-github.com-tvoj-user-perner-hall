@@ -63,3 +63,18 @@
     margin-top: 2.2rem;
     text-align: center;
 }
+
+@media (max-width: 768px) {
+    .floorplan__legend {
+        gap: 1.2rem;
+        padding: 1.2rem;
+    }
+
+    .floorplan__legend-item {
+        font-size: .7rem;
+    }
+
+    .floorplan__header {
+        margin-bottom: 2rem;
+    }
+}

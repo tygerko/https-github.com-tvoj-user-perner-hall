@@ -24,7 +24,7 @@ const Navbar = ({ onOpenModal }) => {
                 </a>
                 <ul className={`nav__links ${isOpen ? 'open' : ''}`} id="navLinks">
                     <li><a href="#why" onClick={() => setIsOpen(false)}>PROSTOR</a></li>
-                    <li><a href="#floorplan" onClick={() => setIsOpen(false)}>FLOOR PLAN</a></li>
+                    <li><a href="#floorplan" onClick={() => setIsOpen(false)}>SPACE PLAN</a></li>
                     <li><a href="#caps" onClick={() => setIsOpen(false)}>KAPACITY</a></li>
                     <li><a href="#gallery" onClick={() => setIsOpen(false)}>GALERIE</a></li>
                     <li><a href="#contact" onClick={() => setIsOpen(false)}>KONTAKT</a></li>

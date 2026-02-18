@@ -7,7 +7,7 @@ const Hero = ({ onOpenModal }) => {
             <div className="hero__bg"></div>
             <div className="hero__content">
                 <h1 className="hero__title">
-                    PernerExperience
+                    PERNER.EXPERIENCE
                     <span className="hero__subtitle">by Scott.Weber Workspace</span>
                 </h1>
                 <p className="hero__desc">
@@ -15,7 +15,7 @@ const Hero = ({ onOpenModal }) => {
                 </p>
                 <div className="hero__btns">
                     <button className="btn btn--gold" onClick={onOpenModal}>KONTAKTUJTE NÁS</button>
-                    <a href="#floorplan" className="btn btn--outline">ZOBRAZIT SPACEPLANE</a>
+                    <a href="#floorplan" className="btn btn--outline">ZOBRAZIT SPACE PLAN</a>
                 </div>
             </div>
             <div className="hero__accent"></div>
