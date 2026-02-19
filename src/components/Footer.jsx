@@ -160,7 +160,7 @@ const Footer = () => {
                             <div className="contact__map-wrap" id="mapWrap">
                                 <iframe
                                     id="mapIframe"
-                                    src={`https://www.google.com/maps/embed/v1/place?key=${import.meta.env.VITE_GOOGLE_MAPS_API_KEY}&q=50.091391,14.455645&zoom=18`}
+                                    src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyCPwDwm2jYVhJpRi4IWE2eVWE0UuHWYOEI&q=50.091391,14.455645&zoom=18`}
                                     allowFullScreen=""
                                     loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"
