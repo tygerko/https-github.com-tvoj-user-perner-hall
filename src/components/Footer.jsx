@@ -70,27 +70,14 @@ const Footer = () => {
                                     Tram 8, 14 – zastávka <strong style={{ color: 'var(--clr-text)' }}>Křižíkova</strong></p>
                             </div>
                             <div className="contact__map-wrap" id="mapWrap">
-                                {/* Static map preview while API key is being set up */}
-                                <div className="map-placeholder" style={{ width: '100%', height: '100%', background: '#1a1a1a', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', borderRadius: '12px' }}>
-                                    <img
-                                        src="/assets/map-preview.png"
-                                        alt="PernerHall Area Map Preview"
-                                        style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 1 }}
-                                    />
-                                </div>
-                                {/* 
-                                {import.meta.env.VITE_GOOGLE_MAPS_API_KEY ? (
-                                    <iframe
-                                        id="mapIframe"
-                                        src={`https://www.google.com/maps/embed/v1/place?key=${import.meta.env.VITE_GOOGLE_MAPS_API_KEY}&q=Pernerova+8,Prague`}
-                                        allowFullScreen=""
-                                        loading="lazy"
-                                        referrerPolicy="no-referrer-when-downgrade"
-                                        title="PernerHall – Pernerová 8, Praha"
-                                        style={{ opacity: 1 }}
-                                    ></iframe>
-                                ) : null}
-                                */}
+                                <iframe
+                                    id="mapIframe"
+                                    src={`https://www.google.com/maps/embed/v1/place?key=${import.meta.env.VITE_GOOGLE_MAPS_API_KEY}&q=50.091391,14.455645&zoom=18`}
+                                    allowFullScreen=""
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                    title="Perner.Experience – Pernerova 727/40a, Praha Karlín"
+                                ></iframe>
                             </div>
                         </div>
                     </div>

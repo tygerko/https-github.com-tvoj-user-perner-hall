@@ -10,7 +10,7 @@ const whyData = [
                 <path d="M12 6V4M24 6V4" />
             </svg>
         ),
-        title: 'Multifunkční PernerHall',
+        title: 'Multifunkční Perner.Experience',
         desc: 'Kapacita až 300 osob v divatelním uspořádání – hlavní sál pro konference, prezentace i gala.'
     },
     {
