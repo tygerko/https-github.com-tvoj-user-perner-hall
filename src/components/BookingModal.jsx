@@ -75,7 +75,7 @@ const BookingModal = ({ isOpen, onClose }) => {
         <div className="modal-overlay active" onClick={handleClose}>
             <div className="modal" onClick={(e) => e.stopPropagation()}>
                 <div className="modal__header">
-                    <h3>{status === 'success' ? 'Poptávka přijata' : 'Zkontrolovat dostupnost'}</h3>
+                    <h3>{status === 'success' ? 'Poptávka přijata' : 'Poptávka'}</h3>
                     <button className="modal__close" onClick={handleClose}>&times;</button>
                 </div>
                 <div className="modal__body">
