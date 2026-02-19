@@ -131,7 +131,7 @@ const Footer = () => {
                                     <textarea name="message" className="form__textarea" placeholder="Popis vaší akce, požadavky…" value={form.message} onChange={handleChange}></textarea>
                                 </div>
                                 <button type="submit" className="btn btn--gold form__submit" disabled={status === 'sending'}>
-                                    {status === 'sending' ? 'Odesílám…' : 'Odeslat zprávu'}
+                                    {status === 'sending' ? 'Odesílám…' : 'Odeslat žádost'}
                                 </button>
                                 {status === 'error' && <p className="form__error">Něco se pokazilo. Zkuste to prosím znovu.</p>}
                             </form>
