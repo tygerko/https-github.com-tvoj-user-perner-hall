@@ -24,10 +24,10 @@ function App() {
         <Hero onOpenModal={openModal} />
         <TrustBar />
         <Why />
-        <FloorPlan />
+        <Gallery />
         <Capacities />
         <UseCases />
-        <Gallery />
+        <FloorPlan />
       </main>
       <Footer />
       <BookingModal isOpen={isModalOpen} onClose={closeModal} />

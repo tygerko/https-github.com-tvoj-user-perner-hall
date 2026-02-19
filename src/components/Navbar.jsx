@@ -29,10 +29,10 @@ const Navbar = ({ onOpenModal }) => {
                     <li><a href="#gallery" onClick={() => setIsOpen(false)}>GALERIE</a></li>
                     <li><a href="#contact" onClick={() => setIsOpen(false)}>KONTAKT</a></li>
                     <li className="nav__mobile-cta">
-                        <button onClick={() => { setIsOpen(false); onOpenModal(); }}>OZVĚTE SE NÁM</button>
+                        <button onClick={() => { setIsOpen(false); onOpenModal(); }}>REZERVOVAT PROSTOR</button>
                     </li>
                 </ul>
-                <button className="nav__cta" onClick={onOpenModal}>OZVĚTE SE NÁM</button>
+                <button className="nav__cta" onClick={onOpenModal}>REZERVOVAT PROSTOR</button>
                 <button className={`nav__burger ${isOpen ? 'active' : ''}`} id="burger" aria-label="Menu" onClick={toggleMenu}>
                     <span></span><span></span><span></span>
                 </button>

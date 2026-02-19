@@ -2,7 +2,7 @@
     padding: 2.2rem 0;
     border-top: 1px solid var(--clr-border-dim);
     border-bottom: 1px solid var(--clr-border-dim);
-    background: var(--clr-surface);
+    background: #0a0a0a;
 }
 
 .trust__inner {
@@ -18,7 +18,7 @@
     color: var(--clr-text-dim);
     white-space: nowrap;
     z-index: 2;
-    background: var(--clr-surface);
+    background: #0a0a0a;
     padding-right: 2rem;
 }
 

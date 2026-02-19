@@ -74,12 +74,12 @@ a {
 }
 
 .section-pad {
-  padding-block: 7rem;
+  padding-block: 4.5rem;
 }
 
 @media (max-width: 768px) {
   .section-pad {
-    padding-block: 4.5rem;
+    padding-block: 3rem;
   }
 }
 
