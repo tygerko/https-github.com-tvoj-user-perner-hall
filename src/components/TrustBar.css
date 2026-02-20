@@ -63,6 +63,16 @@
     opacity: 1;
 }
 
+.trust__logo-img--color {
+    filter: none;
+    opacity: .65;
+}
+
+.trust__logo-img--color:hover {
+    filter: none;
+    opacity: 1;
+}
+
 @keyframes scroll {
     0% {
         transform: translateX(0);

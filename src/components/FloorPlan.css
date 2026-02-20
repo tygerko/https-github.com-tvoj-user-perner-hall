@@ -18,11 +18,24 @@
     font-weight: 300;
 }
 
+.floorplan__sub {
+    margin-top: .8rem;
+    font-size: .88rem;
+    color: var(--clr-text-dim);
+}
+
+/* Overview floor plan */
+.floorplan__overview {
+    margin-bottom: 3.5rem;
+}
+
 .floorplan__wrapper {
     position: relative;
     background: #1a1a18;
     border: 1px solid var(--clr-border-dim);
     overflow: hidden;
+    cursor: zoom-in;
+    margin: 0;
 }
 
 .floorplan__img {
@@ -30,6 +43,38 @@
     height: auto;
     display: block;
     opacity: .92;
+    transition: opacity var(--dur) var(--ease), transform .4s var(--ease);
+}
+
+.floorplan__wrapper:hover .floorplan__img {
+    opacity: 1;
+    transform: scale(1.01);
+}
+
+.floorplan__zoom-hint {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    font-size: .72rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #fff;
+    background: rgba(0,0,0,.55);
+    padding: .4rem .8rem;
+    border: 1px solid rgba(255,255,255,.15);
+    pointer-events: none;
+}
+
+.floorplan__caption {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
 }
 
 .floorplan__legend {
@@ -59,12 +104,162 @@
     border-radius: 2px;
 }
 
-.floorplan__actions {
-    margin-top: 2.2rem;
-    text-align: center;
+/* Setup cards */
+.floorplan__setups-header {
+    margin-bottom: 1.8rem;
 }
 
-@media (max-width: 768px) {
+.floorplan__setups-header h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--clr-text-dim);
+}
+
+.floorplan__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+}
+
+.setup-card {
+    background: var(--clr-surface2);
+    border: 1px solid var(--clr-border-dim);
+    overflow: hidden;
+    transition: border-color var(--dur) var(--ease);
+}
+
+.setup-card:hover {
+    border-color: var(--clr-gold);
+}
+
+.setup-card__img-wrap {
+    position: relative;
+    overflow: hidden;
+    cursor: zoom-in;
+    aspect-ratio: 4/3;
+    background: #111;
+}
+
+.setup-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .4s var(--ease), opacity var(--dur) var(--ease);
+    opacity: .88;
+}
+
+.setup-card__img-wrap:hover .setup-card__img {
+    transform: scale(1.04);
+    opacity: 1;
+}
+
+.setup-card__zoom {
+    position: absolute;
+    top: .6rem;
+    right: .6rem;
+    width: 30px;
+    height: 30px;
+    background: rgba(0,0,0,.6);
+    border: 1px solid rgba(255,255,255,.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    opacity: 0;
+    transition: opacity var(--dur) var(--ease);
+    pointer-events: none;
+}
+
+.setup-card__img-wrap:hover .setup-card__zoom {
+    opacity: 1;
+}
+
+.setup-card__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .9rem 1.1rem;
+    gap: 1rem;
+}
+
+.setup-card__label {
+    font-size: .8rem;
+    font-weight: 500;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--clr-text);
+}
+
+.setup-card__download {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    font-size: .72rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--clr-gold);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: opacity var(--dur) var(--ease);
+}
+
+.setup-card__download:hover {
+    opacity: .7;
+}
+
+/* Lightbox */
+.fp-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0,0,0,.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    cursor: zoom-out;
+}
+
+.fp-lightbox__close {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.4rem;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.4rem;
+    cursor: pointer;
+    opacity: .7;
+    transition: opacity var(--dur) var(--ease);
+    z-index: 1001;
+}
+
+.fp-lightbox__close:hover {
+    opacity: 1;
+}
+
+.fp-lightbox__img {
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+    cursor: default;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+    .floorplan__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .floorplan__grid {
+        grid-template-columns: 1fr;
+    }
+
     .floorplan__legend {
         gap: 1.2rem;
         padding: 1.2rem;
