@@ -38,17 +38,17 @@
     animation: scroll 40s linear infinite;
 }
 
-.trust__logo--text {
-    font-size: .75rem;
-    font-weight: 600;
-    letter-spacing: .18em;
-    text-transform: uppercase;
-    color: var(--clr-text);
-    opacity: .5;
+.trust__logo-img {
+    height: 36px;
+    width: auto;
+    object-fit: contain;
+    opacity: .55;
+    filter: brightness(0) invert(1);
     transition: opacity var(--dur) var(--ease);
+    flex-shrink: 0;
 }
 
-.trust__logo--text:hover {
+.trust__logo-img:hover {
     opacity: 1;
 }
 
