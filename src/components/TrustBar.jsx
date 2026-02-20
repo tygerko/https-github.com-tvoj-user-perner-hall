@@ -3,7 +3,7 @@ import './TrustBar.css';
 
 const logos = [
     { src: '/assets/clients/visa-1.png', alt: 'Visa' },
-    { src: '/assets/clients/bolt-1.png', alt: 'Bolt' },
+    { src: '/assets/clients/bolt-1.png', alt: 'Bolt', white: true },
     { src: '/assets/clients/ey-1.png', alt: 'EY' },
     { src: '/assets/clients/hd-1.png', alt: 'Havel & Partners' },
     { src: '/assets/clients/rapid-1.png', alt: 'Rapid7' },
@@ -32,7 +32,7 @@ const TrustBar = () => {
                                     key={i}
                                     src={logo.src}
                                     alt={logo.alt}
-                                    className="trust__logo-img"
+                                    className={`trust__logo-img${logo.white ? ' trust__logo-img--white' : ''}`}
                                 />
                             ))}
                         </div>

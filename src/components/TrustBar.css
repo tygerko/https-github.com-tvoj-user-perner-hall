@@ -42,12 +42,24 @@
     height: 36px;
     width: auto;
     object-fit: contain;
-    opacity: .8;
-    transition: opacity var(--dur) var(--ease);
+    opacity: .45;
+    filter: grayscale(1);
+    transition: opacity var(--dur) var(--ease), filter var(--dur) var(--ease);
     flex-shrink: 0;
 }
 
 .trust__logo-img:hover {
+    opacity: 1;
+    filter: grayscale(0);
+}
+
+.trust__logo-img--white {
+    filter: grayscale(0) brightness(0) invert(1);
+    opacity: .45;
+}
+
+.trust__logo-img--white:hover {
+    filter: grayscale(0) brightness(0) invert(1);
     opacity: 1;
 }
 
