@@ -42,8 +42,8 @@
     height: 36px;
     width: auto;
     object-fit: contain;
-    opacity: .55;
-    filter: brightness(0) invert(1);
+    opacity: .6;
+    filter: grayscale(1);
     transition: opacity var(--dur) var(--ease);
     flex-shrink: 0;
 }
