@@ -53,6 +53,13 @@ const Footer = () => {
             );
             if (res.ok) {
                 setStatus('success');
+                setTimeout(() => {
+                    setStatus('idle');
+                    setForm({
+                        firstname: '', lastname: '', email: '', phone: '',
+                        company: '', datum_akce: '', pocet_hostu: '', typ_akce: '', message: '',
+                    });
+                }, 4000);
             } else {
                 setStatus('error');
             }
