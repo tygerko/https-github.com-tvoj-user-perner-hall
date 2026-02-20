@@ -23,9 +23,15 @@ const capsData = [
     {
         icon: (
             <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" strokeWidth="1.2">
-                <circle cx="18" cy="18" r="12" />
-                <path d="M18 6v24M6 18h24" />
-                <circle cx="18" cy="18" r="4" />
+                {/* stlpy / portikus */}
+                <path d="M4 30h28" />
+                <path d="M4 12h28" />
+                <rect x="4" y="8" width="28" height="4" rx="0.5" />
+                <line x1="8" y1="12" x2="8" y2="30" />
+                <line x1="14" y1="12" x2="14" y2="30" />
+                <line x1="22" y1="12" x2="22" y2="30" />
+                <line x1="28" y1="12" x2="28" y2="30" />
+                <path d="M18 4l14 4H4l14-4z" />
             </svg>
         ),
         title: 'Perner.Central',
@@ -38,10 +44,14 @@ const capsData = [
     {
         icon: (
             <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" strokeWidth="1.2">
-                <path d="M8 28V14l10-7 10 7v14" />
-                <path d="M8 14l10 6 10-6" />
-                <rect x="14" y="20" width="8" height="8" />
-                <path d="M6 28h24" />
+                {/* 3 postavicky vedla seba */}
+                <circle cx="10" cy="10" r="3" />
+                <path d="M5 24v-5a5 3 0 0 1 10 0v5" />
+                <circle cx="18" cy="9" r="3" />
+                <path d="M13 24v-6a5 3 0 0 1 10 0v6" />
+                <circle cx="26" cy="10" r="3" />
+                <path d="M21 24v-5a5 3 0 0 1 10 0v5" />
+                <path d="M2 28h32" />
             </svg>
         ),
         title: 'Perner.Klub',
@@ -54,9 +64,9 @@ const capsData = [
     {
         icon: (
             <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" strokeWidth="1.2">
-                <rect x="6" y="8" width="24" height="20" rx="2" />
-                <path d="M6 14h24M12 28v4M24 28v4" />
-                <circle cx="18" cy="18" r="3" />
+                {/* play button v kruhu */}
+                <circle cx="18" cy="18" r="14" />
+                <polygon points="14,11 14,25 27,18" fill="currentColor" stroke="none" opacity="0.9" />
             </svg>
         ),
         title: 'Perner.Kino',
@@ -68,9 +78,22 @@ const capsData = [
     {
         icon: (
             <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" strokeWidth="1.2">
-                <path d="M18 6c-5 0-9 4-9 9 0 6 9 14 9 14s9-8 9-14c0-5-4-9-9-9z" />
-                <path d="M14 20h8M14 24h5" />
-                <circle cx="18" cy="12" r="2.5" />
+                {/* strom lavy */}
+                <path d="M7 28v-8" />
+                <circle cx="7" cy="16" r="5" />
+                {/* strom pravy */}
+                <path d="M27 28v-9" />
+                <circle cx="27" cy="15" r="6" />
+                {/* lavicka */}
+                <path d="M13 26h10" />
+                <path d="M14 26v2M22 26v2" />
+                <path d="M12 24h12" />
+                {/* lampa */}
+                <path d="M19 22v-8" />
+                <path d="M19 14l3-2" />
+                <path d="M22 12v3l-3 0" />
+                {/* zem */}
+                <path d="M2 30h32" />
             </svg>
         ),
         title: 'Perner.Garden',

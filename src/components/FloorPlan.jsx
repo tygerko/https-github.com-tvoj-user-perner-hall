@@ -66,7 +66,7 @@ const FloorPlan = () => {
             <div className="container">
                 <div className="floorplan__header">
                     <div className="label">Prostorová dispozice</div>
-                    <h2>PLAN</h2>
+                    <h2>SPACE PLAN</h2>
                     <p className="floorplan__sub">Vyberte uspořádání pro váš event – klikněte pro zvětšení nebo stáhněte PDF podklady.</p>
                 </div>
 
