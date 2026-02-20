@@ -12,12 +12,12 @@ const capsData = [
                 <circle cx="24" cy="22" r="1.5" fill="currentColor" stroke="none" />
             </svg>
         ),
-        title: 'Hlavní sál – Perner.Hall',
+        title: 'Perner.Hall – Hlavní sál',
         rows: [
             { label: 'Divadlo', val: '300 osob' },
             { label: 'Škola', val: '161 osob' },
-            { label: 'Koktejl', val: '81 osob' },
-            { label: 'Gala', val: '240 osob' }
+            { label: 'Koktejl', val: '240 osob' },
+            { label: 'Gala', val: '81 osob' }
         ]
     },
     {
@@ -31,7 +31,8 @@ const capsData = [
         title: 'Perner.Central',
         rows: [
             { label: 'Divadlo', val: '70 osob' },
-            { label: 'Škola', val: '36 osob' }
+            { label: 'Škola', val: '36 osob' },
+            { label: 'Koktejl', val: '240 osob' }
         ]
     },
     {
@@ -46,7 +47,8 @@ const capsData = [
         title: 'Perner.Klub',
         rows: [
             { label: 'Divadlo', val: '70 osob' },
-            { label: 'Škola', val: '36 osob' }
+            { label: 'Škola', val: '36 osob' },
+            { label: 'Koktejl', val: '240 osob' }
         ]
     },
     {
@@ -59,7 +61,21 @@ const capsData = [
         ),
         title: 'Perner.Kino',
         rows: [
-            { label: 'Kapacita', val: '15 osob' }
+            { label: 'Kapacita', val: '15 osob' },
+            { label: 'Koktejl', val: '240 osob' }
+        ]
+    },
+    {
+        icon: (
+            <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" strokeWidth="1.2">
+                <path d="M18 6c-5 0-9 4-9 9 0 6 9 14 9 14s9-8 9-14c0-5-4-9-9-9z" />
+                <path d="M14 20h8M14 24h5" />
+                <circle cx="18" cy="12" r="2.5" />
+            </svg>
+        ),
+        title: 'Perner.Garden',
+        rows: [
+            { label: 'Koktejl', val: '240 osob' }
         ]
     }
 ];
