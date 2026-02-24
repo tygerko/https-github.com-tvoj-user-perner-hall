@@ -15,9 +15,9 @@ const capsData = [
         title: 'Perner.Hall – Hlavní sál',
         rows: [
             { label: 'Divadlo', val: '300 osob' },
-            { label: 'Škola', val: '161 osob' },
-            { label: 'Koktejl', val: '240 osob' },
-            { label: 'Gala', val: '81 osob' }
+            { label: 'Škola', val: '160 osob' },
+            { label: 'Koktejl', val: '450 osob' },
+            { label: 'Gala', val: '240 osob' }
         ]
     },
     {
@@ -38,7 +38,8 @@ const capsData = [
         rows: [
             { label: 'Divadlo', val: '70 osob' },
             { label: 'Škola', val: '36 osob' },
-            { label: 'Koktejl', val: '240 osob' }
+            { label: 'Koktejl', val: '100 osob' },
+            { label: 'Gala', val: '60 osob' }
         ]
     },
     {
@@ -56,9 +57,8 @@ const capsData = [
         ),
         title: 'Perner.Klub',
         rows: [
-            { label: 'Divadlo', val: '70 osob' },
-            { label: 'Škola', val: '36 osob' },
-            { label: 'Koktejl', val: '240 osob' }
+            { label: 'Divadlo', val: '40 osob' },
+            { label: 'Koktejl', val: '100 osob' }
         ]
     },
     {
@@ -71,8 +71,7 @@ const capsData = [
         ),
         title: 'Perner.Kino',
         rows: [
-            { label: 'Kapacita', val: '15 osob' },
-            { label: 'Koktejl', val: '240 osob' }
+            { label: 'Divadlo', val: '15 osob' }
         ]
     },
     {
@@ -98,7 +97,7 @@ const capsData = [
         ),
         title: 'Perner.Garden',
         rows: [
-            { label: 'Koktejl', val: '240 osob' }
+            { label: 'Koktejl', val: '250 osob' }
         ]
     }
 ];
