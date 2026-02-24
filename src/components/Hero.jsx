@@ -20,7 +20,8 @@ const Hero = ({ onOpenModal }) => {
                     muted
                     loop
                     playsInline
-                    poster="/assets/venue-main.jpg"
+                    preload="none"
+                    poster="/assets/venue-main.webp"
                 >
                     <source src="/assets/hero-video.mp4" type="video/mp4" />
                 </video>
@@ -28,7 +29,12 @@ const Hero = ({ onOpenModal }) => {
             <div className="hero__content">
                 <h1 className="hero__title">
                     PERNER.EXPERIENCE
-                    <span className="hero__subtitle">by Scott.Weber Workspace</span>
+                    <a
+                        className="hero__subtitle"
+                        href="https://scottweber.cz/location/pernerkarlin/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >by Scott.Weber Workspace</a>
                 </h1>
                 <p className="hero__desc">
                     PernerKarlín nabízí ikonické eventový prostor pro nezapomenutelné zážitky s kapacitou až 700 hostů.

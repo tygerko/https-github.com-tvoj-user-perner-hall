@@ -181,10 +181,28 @@ const Footer = () => {
 
             <footer className="footer">
                 <div className="container">
+                    <div className="footer__links">
+                        <span className="footer__links-label">Součást</span>
+                        <a
+                            href="https://scottweber.cz"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="footer__sw-link"
+                        >Scott.Weber Workspace</a>
+                        <span className="footer__links-sep">·</span>
+                        <a
+                            href="https://scottweber.cz/location/pernerkarlin/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="footer__sw-link"
+                        >PernerKarlín</a>
+                    </div>
                     <div className="footer__inner">
-                        <span className="footer__copy">© 2025 Scott Weber Workspace. All rights reserved.</span>
+                        <span className="footer__copy">© 2026 <a href="https://scottweber.cz" target="_blank" rel="noopener noreferrer">Scott.Weber Workspace</a>. All rights reserved.</span>
                         <span className="footer__logo">
-                            <img src="/assets/logo-scott-weber.png" alt="Scott.Weber Workspace" style={{ height: '24px', width: 'auto' }} />
+                            <a href="https://scottweber.cz" target="_blank" rel="noopener noreferrer">
+                                <img src="/assets/logo-scott-weber.png" alt="Scott.Weber Workspace" style={{ height: '24px', width: 'auto' }} />
+                            </a>
                         </span>
                     </div>
                 </div>

@@ -7,6 +7,12 @@
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
+  <!-- Performance: preload hero poster + DNS warmup for HubSpot -->
+  <link rel="preload" as="image" href="/assets/venue-main.webp" fetchpriority="high" />
+  <link rel="preconnect" href="https://js.hs-scripts.com" />
+  <link rel="preconnect" href="https://js.hsforms.net" />
+  <link rel="dns-prefetch" href="https://api.hsforms.com" />
+
   <!-- Primary SEO -->
   <title>Perner.Experience – Prémiový event prostor Praha Karlín | Scott.Weber Workspace</title>
   <meta name="description" content="Perner.Experience by Scott.Weber – ikonický eventový prostor v Praze Karlíně s kapacitou až 700 hostů. Konference, firemní eventy, product launch, gala večery. Pernerova 727/40a, Praha 8." />
@@ -62,12 +68,18 @@
       "closes": "22:00"
     },
     "maximumAttendeeCapacity": 700,
+    "numberOfRooms": 5,
     "amenityFeature": [
       { "@type": "LocationFeatureSpecification", "name": "AV technologie", "value": true },
       { "@type": "LocationFeatureSpecification", "name": "Catering", "value": true },
       { "@type": "LocationFeatureSpecification", "name": "Wi-Fi", "value": true },
       { "@type": "LocationFeatureSpecification", "name": "Klimatizace", "value": true },
-      { "@type": "LocationFeatureSpecification", "name": "Bezbariérový přístup", "value": true }
+      { "@type": "LocationFeatureSpecification", "name": "Bezbariérový přístup", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Perner.Hall", "value": "Hlavní sál – až 700 hostů" },
+      { "@type": "LocationFeatureSpecification", "name": "Perner.Central", "value": "Reprezentativní vstupní hala" },
+      { "@type": "LocationFeatureSpecification", "name": "Perner.Klub", "value": "VIP salonek – až 50 hostů" },
+      { "@type": "LocationFeatureSpecification", "name": "Perner.Kino", "value": "Kinosál s AV zázemím" },
+      { "@type": "LocationFeatureSpecification", "name": "Perner.Garden", "value": "Venkovní zahrada – koktejl až 240 hostů" }
     ],
     "publicAccess": true,
     "image": "https://scottweber.cz/pernerexperience/assets/og-image.jpg",

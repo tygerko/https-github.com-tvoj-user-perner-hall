@@ -304,6 +304,46 @@
     background: var(--clr-bg);
 }
 
+.footer__links {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.footer__links-label {
+    font-size: .72rem;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: var(--clr-text-muted);
+}
+
+.footer__links-sep {
+    color: var(--clr-border-dim);
+    font-size: .85rem;
+}
+
+.footer__sw-link {
+    font-size: .78rem;
+    color: var(--clr-text-dim);
+    text-decoration: none;
+    transition: color .2s;
+}
+
+.footer__sw-link:hover {
+    color: var(--clr-gold);
+}
+
+.footer__copy a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer__copy a:hover {
+    color: var(--clr-gold);
+}
+
 .footer__inner {
     display: flex;
     justify-content: space-between;
