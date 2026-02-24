@@ -24,7 +24,7 @@ const ExitIntentPopup = () => {
         // Minimum 8s on page before popup can fire
         timerRef.current = setTimeout(() => {
             const onMouseLeave = (e) => {
-                if (e.clientY <= 0) show();
+                if (e.clientY <= 0 || e.clientX <= 0 || e.clientX >= window.innerWidth - 1) show();
             };
             document.addEventListener('mouseleave', onMouseLeave);
             return () => document.removeEventListener('mouseleave', onMouseLeave);
