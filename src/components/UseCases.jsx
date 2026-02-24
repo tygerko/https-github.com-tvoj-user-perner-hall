@@ -22,7 +22,7 @@ const UseCases = () => {
                 <div className="usecases__grid">
                     {uiCases.map((item, idx) => (
                         <div key={idx} className="usecases__card">
-                            <h4>{item.title}</h4>
+                            <h3>{item.title}</h3>
                             <p>{item.desc}</p>
                         </div>
                     ))}

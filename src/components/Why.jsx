@@ -11,7 +11,7 @@ const whyData = [
                 <path d="M2 12h32" />
             </svg>
         ),
-        title: 'Multifunkční PERNER.HALL',
+        title: 'Multifunkční Perner.Hall',
         desc: 'Kapacita až 300 osob v divadelním uspořádání.'
     },
     {
