@@ -157,7 +157,7 @@ const Footer = () => {
                             </div>
                             <div className="contact__block">
                                 <h4>Lokalita</h4>
-                                <p>PernerKarlín<br />Pernerova 727/40a<br />170 00 Praha – Karlín</p>
+                                <p>PernerKarlín<br />Pernerova 727/40a<br />186 00 Praha – Karlín</p>
                             </div>
                             <div className="contact__block">
                                 <h4>MHD</h4>

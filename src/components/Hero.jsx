@@ -37,7 +37,7 @@ const Hero = ({ onOpenModal }) => {
                     >by Scott.Weber Workspace</a>
                 </h1>
                 <p className="hero__desc">
-                    PernerKarlín nabízí ikonické eventový prostor pro nezapomenutelné zážitky s kapacitou až 700 hostů.
+                    PernerKarlín nabízí ikonický eventový prostor pro nezapomenutelné zážitky s kapacitou až 700 hostů.
                 </p>
                 <div className="hero__btns">
                     <button className="btn btn--gold" onClick={onOpenModal}>NEZÁVAZNÁ POPTÁVKA</button>
