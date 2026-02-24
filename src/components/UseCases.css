@@ -10,7 +10,7 @@
     background-image: url('/assets/gallery/PK8_Event5.jpg');
     background-size: cover;
     background-position: center 40%;
-    filter: brightness(.18) saturate(.6);
+    filter: brightness(.22) saturate(.6);
     z-index: 0;
 }
 
