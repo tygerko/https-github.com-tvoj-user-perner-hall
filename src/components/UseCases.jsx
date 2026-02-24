@@ -2,12 +2,12 @@ import React from 'react';
 import './UseCases.css';
 
 const uiCases = [
-    { title: 'KONFERENCE, KONGRESY & SUMMITY', desc: 'Velkokapacitní profesionální akce s multi-stage setup.' },
-    { title: 'VÝSTAVY, VELETRHY & SHOWCASE', desc: 'Flexibilní prostor pro produktové prezentace.' },
-    { title: 'PRODUCT LAUNCH & BRAND EVENTS', desc: 'Atmosphérický prostor pro nezapomitelný launch.' },
-    { title: 'FIREMNÍ & GALA EVENTY', desc: 'Elegantní prostředí pro premium corporate gatherings.' },
-    { title: 'KULTURNÍ & VEŘEJNÉ AKCE', desc: 'Unikátní venue pro kulturní programy a veřejnost.' },
-    { title: 'MULTIFORMÁTOVÉ & HYBRIDNÍ AKCE', desc: 'AI-ready infrastruktura pro online + offline combo.' }
+    { title: 'Konference, kongresy & summity', desc: 'Velkokapacitní profesionální akce s multi-stage setup a hybridním přenosem.' },
+    { title: 'Výstavy, veletrhy & showcase', desc: 'Flexibilní prostor pro produktové prezentace a interaktivní expozice.' },
+    { title: 'Product launch, press & brand events', desc: 'Atmosphérický prostor pro nezapomenutelný launch s plnou AV podporou.' },
+    { title: 'Firemní, společenské & gala eventy', desc: 'Elegantní prostředí pro premium corporate gatherings a gala večery.' },
+    { title: 'Kulturní & veřejné akce', desc: 'Unikátní venue pro kulturní programy, výstavy a veřejné události.' },
+    { title: 'Multiformátové & hybridní akce', desc: 'AI-ready infrastruktura pro online + offline combo eventy.' },
 ];
 
 const UseCases = () => {
@@ -22,10 +22,8 @@ const UseCases = () => {
                 <div className="usecases__grid">
                     {uiCases.map((item, idx) => (
                         <div key={idx} className="usecases__card">
-                            <div>
-                                <h4>{item.title}</h4>
-                                <p>{item.desc}</p>
-                            </div>
+                            <h4>{item.title}</h4>
+                            <p>{item.desc}</p>
                         </div>
                     ))}
                 </div>

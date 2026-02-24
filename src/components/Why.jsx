@@ -11,8 +11,8 @@ const whyData = [
                 <path d="M2 12h32" />
             </svg>
         ),
-        title: 'Multifunkční Perner.Experience',
-        desc: 'Kapacita až 300 osob v divadelním uspořádání – hlavní sál pro konference, prezentace i gala.'
+        title: 'Multifunkční PERNER.HALL',
+        desc: 'Kapacita až 300 osob v divadelním uspořádání.'
     },
     {
         icon: (
@@ -23,8 +23,8 @@ const whyData = [
                 <path d="M2 28h32" />
             </svg>
         ),
-        title: 'Propojitelný komplex',
-        desc: 'Perner.Hall, Perner.Central, Perner.Klub a Perner.Kino.'
+        title: 'Propojitelný komplex Perner.Experience',
+        desc: 'Experience event floor pro až 700 osob: eventový sál, zahrada, foyer, kino, společenský klub, zázemí.'
     },
     {
         icon: (

@@ -7,7 +7,7 @@ const logos = [
     { src: '/assets/clients/ey.svg', alt: 'EY', height: 36 },
     { src: '/assets/clients/harley-davidson.svg', alt: 'Harley-Davidson', height: 19 },
     { src: '/assets/clients/rapid7.svg', alt: 'Rapid7', height: 23 },
-    { src: '/assets/clients/rohlik.png', alt: 'Rohlik.cz', height: 62 },
+    { src: '/assets/clients/Rohlik.cz_idr_DGmoDM_1.svg', alt: 'Rohlik.cz', height: 62 },
     { src: '/assets/clients/generali.svg', alt: 'Generali' },
     { src: '/assets/clients/ocp-1.png', alt: 'OCP Oční centrum Praha', white: true, height: 80 },
     { src: '/assets/clients/nestle.svg', alt: 'Nestlé', white: true, height: 43 },
