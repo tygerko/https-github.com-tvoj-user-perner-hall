@@ -152,7 +152,7 @@ const Footer = () => {
                                 <h3>Kontaktní osoba</h3>
                                 <p><strong style={{ color: 'var(--clr-text)' }}>Petr Svoboda</strong><br />
                                     Head of Event Sales & Production<br />
-                                    <a href="#">svoboda@scottweber.cz</a><br />
+                                    <a href="mailto:svoboda@scottweber.cz">svoboda@scottweber.cz</a><br />
                                     <a href="tel:+420724286796">+420 724 286 796</a></p>
                             </div>
                             <div className="contact__block">
