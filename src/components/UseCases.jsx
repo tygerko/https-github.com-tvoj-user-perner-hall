@@ -4,10 +4,10 @@ import './UseCases.css';
 const uiCases = [
     { title: 'Konference, kongresy & summity', desc: 'Velkokapacitní profesionální akce s multi-stage setup a hybridním přenosem.' },
     { title: 'Výstavy, veletrhy & showcase', desc: 'Flexibilní prostor pro produktové prezentace a interaktivní expozice.' },
-    { title: 'Product launch, press & brand events', desc: 'Atmosphérický prostor pro nezapomenutelný launch s plnou AV podporou.' },
-    { title: 'Firemní, společenské & gala eventy', desc: 'Elegantní prostředí pro premium corporate gatherings a gala večery.' },
+    { title: 'Product launch, press & brand events', desc: 'Exkluzivní prostor pro představení produktů, tiskové konference a brand eventy.' },
+    { title: 'Firemní, společenské & gala eventy', desc: 'Elegantní prostor pro corporate events a slavnostní večery.' },
     { title: 'Kulturní & veřejné akce', desc: 'Unikátní venue pro kulturní programy, výstavy a veřejné události.' },
-    { title: 'Multiformátové & hybridní akce', desc: 'AI-ready infrastruktura pro online + offline combo eventy.' },
+    { title: 'Multiformátové & hybridní akce', desc: 'AI-ready infrastruktura pro jedinečné hybridní eventy.' },
 ];
 
 const UseCases = () => {
