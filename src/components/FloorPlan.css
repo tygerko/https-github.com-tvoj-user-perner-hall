@@ -2,7 +2,6 @@
     background: var(--clr-surface);
     border-top: 1px solid var(--clr-border-dim);
     border-bottom: 1px solid var(--clr-border-dim);
-    /* Prevent PDF iframe from bleeding into page layout */
     overflow: hidden;
 }
 
@@ -24,39 +23,191 @@
     margin-top: .8rem;
     font-size: .88rem;
     color: var(--clr-text-dim);
+    max-width: 560px;
+    margin-inline: auto;
 }
 
-/* Big scrollable PDF viewer */
-.floorplan__pdf-wrap {
+/* ── Swipe Slider ── */
+.spslider {
+    position: relative;
     width: 100%;
-    /* Scales with viewport, min 480px, max 960px */
-    height: clamp(480px, 82vh, 960px);
+    background: #111;
     border: 1px solid var(--clr-border-dim);
+    overflow: hidden;
+    user-select: none;
+}
+
+.spslider__img-wrap {
+    width: 100%;
+    aspect-ratio: 16 / 9;
     overflow: hidden;
     background: #1a1a18;
 }
 
-.floorplan__pdf {
+.spslider__img {
     width: 100%;
     height: 100%;
-    border: none;
+    object-fit: cover;
     display: block;
+    animation: spFadeIn .3s ease;
 }
 
-/* Tablet */
-@media (max-width: 900px) {
-    .floorplan__pdf-wrap {
-        height: clamp(380px, 75vh, 700px);
-    }
+@keyframes spFadeIn {
+    from { opacity: 0; transform: scale(1.015); }
+    to   { opacity: 1; transform: scale(1); }
 }
 
-/* Mobile */
+/* Info bar */
+.spslider__bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.4rem;
+    background: var(--clr-surface2);
+    border-top: 1px solid var(--clr-border-dim);
+}
+
+.spslider__info {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    min-width: 0;
+}
+
+.spslider__label {
+    font-size: .82rem;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--clr-text);
+    white-space: nowrap;
+}
+
+.spslider__sub {
+    font-size: .72rem;
+    color: var(--clr-text-dim);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.spslider__download {
+    display: flex;
+    align-items: center;
+    gap: .45rem;
+    font-size: .72rem;
+    font-weight: 500;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--clr-gold);
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: opacity var(--dur) var(--ease);
+}
+
+.spslider__download:hover { opacity: .7; }
+
+/* Counter */
+.spslider__counter {
+    position: absolute;
+    top: .75rem;
+    right: .9rem;
+    font-size: .68rem;
+    letter-spacing: .08em;
+    color: #fff;
+    background: rgba(0,0,0,.5);
+    padding: .25rem .6rem;
+    pointer-events: none;
+}
+
+/* Arrows */
+.spslider__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(calc(-50% - 22px));
+    background: rgba(0,0,0,.55);
+    border: 1px solid rgba(255,255,255,.15);
+    color: #fff;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background var(--dur) var(--ease);
+    z-index: 2;
+}
+
+.spslider__arrow:hover { background: rgba(0,0,0,.85); }
+.spslider__arrow--prev { left: .75rem; }
+.spslider__arrow--next { right: .75rem; }
+
+/* Dots */
+.spslider__dots {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin-top: 1.4rem;
+}
+
+.spslider__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1px solid var(--clr-border-dim);
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    transition: background var(--dur) var(--ease), border-color var(--dur) var(--ease);
+}
+
+.spslider__dot.active {
+    background: var(--clr-gold);
+    border-color: var(--clr-gold);
+}
+
+/* SEO hidden list – viditeľné pre crawlerov */
+.spslider__seo-list {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* ── Responsive ── */
 @media (max-width: 600px) {
-    .floorplan__pdf-wrap {
-        height: clamp(300px, 65vh, 520px);
-    }
-
     .floorplan__header {
         margin-bottom: 2rem;
     }
+
+    .spslider__img-wrap {
+        aspect-ratio: 4 / 3;
+    }
+
+    .spslider__bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .75rem;
+        padding: .9rem 1rem;
+    }
+
+    .spslider__sub {
+        white-space: normal;
+    }
+
+    .spslider__arrow {
+        width: 36px;
+        height: 36px;
+    }
+
+    .spslider__arrow--prev { left: .4rem; }
+    .spslider__arrow--next { right: .4rem; }
 }
