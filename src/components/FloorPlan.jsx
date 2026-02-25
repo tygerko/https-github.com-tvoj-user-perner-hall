@@ -1,17 +1,97 @@
 import React, { useState, useRef, useCallback } from 'react';
 import './FloorPlan.css';
-import PdfViewer from './PdfViewer';
 
-const setups = [
-    { slug: 'setup-a1-b2', label: 'Setup A1 + B2', alt: 'Eventový prostor Praha Karlín – Setup A1+B2, sálové uspořádání pro konference a firemní akce, PernerKarlín' },
-    { slug: 'setup-a2-b3', label: 'Setup A2 + B3', alt: 'Pronájem eventového sálu Praha – Setup A2+B3, banketové uspořádání, PernerKarlín Pernerova' },
-    { slug: 'setup-a3',    label: 'Setup A3',       alt: 'Eventový prostor Karlín Praha – Setup A3, cocktail party uspořádání až 700 hostů, Scott Weber' },
-    { slug: 'setup-a4',    label: 'Setup A4',       alt: 'Firemní akce Praha Karlín – Setup A4, divadelní uspořádání, pronájem sálu PernerKarlín' },
-    { slug: 'setup-a5-b5', label: 'Setup A5 + B5', alt: 'Konference Praha Karlín – Setup A5+B5, hybridní event prostory, PernerKarlín Scott Weber Workspace' },
-    { slug: 'setup-a6-b2', label: 'Setup A6 + B2', alt: 'Teambuilding a workshopy Praha – Setup A6+B2, flexibilní uspořádání sálu, Pernerova 8 Karlín' },
-    { slug: 'setup-c1',    label: 'Setup C1',       alt: 'Pronájem sálu Praha Karlín – Setup C1, gala dinner a večerní akce, PernerKarlín eventový prostor' },
-    { slug: 'setup-c2',    label: 'Setup C2',       alt: 'Event venue Praha – Setup C2, produktové launche a prezentace, PernerKarlín Pernerova Karlín' },
-    { slug: 'setup-c3',    label: 'Setup C3',       alt: 'Firemní večírek Praha Karlín – Setup C3, standing party uspořádání, Scott Weber PernerKarlín' },
+const slides = [
+    {
+        img: '/assets/floor-plan.jpg',
+        label: 'Celkový půdorys',
+        sublabel: 'Přehled všech prostorů Perner.Experience',
+        alt: 'Celkový 3D půdorys eventového prostoru Perner.Experience Praha Karlín – přehled všech sálů, Perner.Hall, Perner.Central, Perner.Klub, Perner.Kino, Perner.Garden',
+        pdf: '/assets/pdf/perner-karlin-varianty-usporadani.pdf',
+        pdfName: 'perner-karlin-varianty-usporadani.pdf',
+        pdfLabel: 'Stáhnout PDF',
+    },
+    {
+        img: '/assets/space-plans/thumbs/setup-a1-b2.jpg',
+        label: 'Divadlo: Perner.Hall + Perner.Central',
+        sublabel: 'Divadelní uspořádání – Hall 300 os. / Central 70 os.',
+        alt: 'Půdorys divadelního uspořádání Perner.Hall a Perner.Central – konference a firemní akce Praha Karlín, Perner.Experience eventový prostor',
+        pdf: '/assets/space-plans/perner-experience-divadlo-hall-central.pdf',
+        pdfName: 'perner-experience-divadlo-hall-central.pdf',
+        pdfLabel: 'Stáhnout PDF',
+    },
+    {
+        img: '/assets/space-plans/thumbs/setup-a2-b3.jpg',
+        label: 'Škola: Perner.Hall + Perner.Central',
+        sublabel: 'Školní uspořádání – Hall 140 os. / Central 36 os.',
+        alt: 'Půdorys školního uspořádání Perner.Hall a Perner.Central – workshopy a školení Praha Karlín, Perner.Experience event venue',
+        pdf: '/assets/space-plans/perner-experience-skola-hall-central.pdf',
+        pdfName: 'perner-experience-skola-hall-central.pdf',
+        pdfLabel: 'Stáhnout PDF',
+    },
+    {
+        img: '/assets/space-plans/thumbs/setup-a3.jpg',
+        label: 'Kabaret: Perner.Hall',
+        sublabel: 'Kabaretní uspořádání hlavního sálu',
+        alt: 'Půdorys kabaretního uspořádání Perner.Hall – společenské večery a firemní akce Praha Karlín, Perner.Experience',
+        pdf: '/assets/space-plans/perner-experience-kabaret-hall.pdf',
+        pdfName: 'perner-experience-kabaret-hall.pdf',
+        pdfLabel: 'Stáhnout PDF',
+    },
+    {
+        img: '/assets/space-plans/thumbs/setup-a4.jpg',
+        label: 'Banket: Perner.Hall',
+        sublabel: 'Banketové uspořádání – až 240 osob',
+        alt: 'Půdorys banketového uspořádání Perner.Hall – gala dinner a společenský večer Praha Karlín, Perner.Experience event prostor',
+        pdf: '/assets/space-plans/perner-experience-banket-hall.pdf',
+        pdfName: 'perner-experience-banket-hall.pdf',
+        pdfLabel: 'Stáhnout PDF',
+    },
+    {
+        img: '/assets/space-plans/thumbs/setup-a5-b5.jpg',
+        label: 'Banket: Perner.Hall + Perner.Central',
+        sublabel: 'Banketové uspořádání – Hall 225 os. / Central 60 os.',
+        alt: 'Půdorys banketového uspořádání Perner.Hall a Perner.Central – gala večery a firemní bankety Praha Karlín, Perner.Experience',
+        pdf: '/assets/space-plans/perner-experience-banket-hall-central.pdf',
+        pdfName: 'perner-experience-banket-hall-central.pdf',
+        pdfLabel: 'Stáhnout PDF',
+    },
+    {
+        img: '/assets/space-plans/thumbs/setup-a6-b2.jpg',
+        label: 'Koktejl: Perner.Hall + Perner.Central',
+        sublabel: 'Koktejlní uspořádání – Hall 450 os. / Central 100 os.',
+        alt: 'Půdorys koktejlního uspořádání Perner.Hall a Perner.Central – cocktail party a networking Praha Karlín, Perner.Experience',
+        pdf: '/assets/space-plans/perner-experience-koktejl-hall-central.pdf',
+        pdfName: 'perner-experience-koktejl-hall-central.pdf',
+        pdfLabel: 'Stáhnout PDF',
+    },
+    {
+        img: '/assets/space-plans/thumbs/setup-c1.jpg',
+        label: 'Divadlo: Perner.Hall 1 & Hall 2',
+        sublabel: 'Divadelní uspořádání – Hall 1: 170 os. / Hall 2: 130 os.',
+        alt: 'Půdorys divadelního uspořádání Perner.Hall 1 a Hall 2 – summity a konference Praha Karlín, Perner.Experience event venue',
+        pdf: '/assets/space-plans/perner-experience-divadlo-hall1-hall2.pdf',
+        pdfName: 'perner-experience-divadlo-hall1-hall2.pdf',
+        pdfLabel: 'Stáhnout PDF',
+    },
+    {
+        img: '/assets/space-plans/thumbs/setup-c2.jpg',
+        label: 'Škola: Perner.Hall 1 & Hall 2',
+        sublabel: 'Školní uspořádání – Hall 1: 90 os. / Hall 2: 70 os.',
+        alt: 'Půdorys školního uspořádání Perner.Hall 1 a Hall 2 – školení a workshopy Praha Karlín, Perner.Experience eventový prostor',
+        pdf: '/assets/space-plans/perner-experience-skola-hall1-hall2.pdf',
+        pdfName: 'perner-experience-skola-hall1-hall2.pdf',
+        pdfLabel: 'Stáhnout PDF',
+    },
+    {
+        img: '/assets/space-plans/thumbs/setup-c3.jpg',
+        label: 'Koktejl: Perner.Hall 1 & Hall 2',
+        sublabel: 'Koktejlní uspořádání – Hall 1: 820 os. / Hall 2: 750 os.',
+        alt: 'Půdorys koktejlního uspořádání Perner.Hall 1 a Hall 2 – standing party a firemní večírek Praha Karlín, Perner.Experience',
+        pdf: '/assets/space-plans/perner-experience-koktejl-hall1-hall2.pdf',
+        pdfName: 'perner-experience-koktejl-hall1-hall2.pdf',
+        pdfLabel: 'Stáhnout PDF',
+    },
 ];
 
 const FloorPlan = () => {
@@ -105,50 +185,31 @@ const FloorPlan = () => {
                     </button>
                 </div>
 
-                {/* Setup cards */}
-                <div className="floorplan__setups-header">
-                    <h3>Varianty uspořádání</h3>
-                </div>
-                <div className="floorplan__grid">
-                    {setups.map((s) => (
-                        <article key={s.slug} className="setup-card">
-                            <div
-                                className="setup-card__img-wrap"
-                                onClick={() => setLightbox({ src: `/assets/space-plans/thumbs/${s.slug}.jpg`, alt: s.alt })}
-                                role="button"
-                                aria-label={`Zvětšit ${s.label}`}
-                            >
-                                <img
-                                    src={`/assets/space-plans/thumbs/${s.slug}.jpg`}
-                                    alt={s.alt}
-                                    className="setup-card__img"
-                                    loading="lazy"
-                                />
-                                <div className="setup-card__zoom">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
-                                </div>
-                            </div>
-                            <div className="setup-card__body">
-                                <span className="setup-card__label">{s.label}</span>
-                            </div>
-                        </article>
+                {/* Dots */}
+                <div className="spslider__dots" role="tablist" aria-label="Výběr uspořádání">
+                    {slides.map((s, i) => (
+                        <button
+                            key={i}
+                            className={`spslider__dot${i === current ? ' active' : ''}`}
+                            onClick={() => setCurrent(i)}
+                            role="tab"
+                            aria-selected={i === current}
+                            aria-label={s.label}
+                        />
                     ))}
                 </div>
 
-                {/* PDF Viewer */}
-                <PdfViewer
-                    file="/assets/pdf/PernerKarlin_varianty_usporadani.pdf"
-                    downloadUrl="/assets/pdf/PernerKarlin_varianty_usporadani.pdf"
-                    title="Varianty uspořádání – kompletní přehled"
-                />
-
-            {/* Lightbox */}
-            {lightbox && (
-                <div className="fp-lightbox" onClick={() => setLightbox(null)} role="dialog" aria-modal="true">
-                    <button className="fp-lightbox__close" onClick={() => setLightbox(null)} aria-label="Zavřít">✕</button>
-                    <img src={lightbox.src} alt={lightbox.alt} className="fp-lightbox__img" onClick={(e) => e.stopPropagation()} />
-                </div>
-            )}
+                {/* SEO list — viditeľné pre crawlerov, vizuálne skryté */}
+                <ul className="spslider__seo-list" aria-hidden="true">
+                    {slides.map((s, i) => (
+                        <li key={i}>
+                            <a href={s.pdf} download={s.pdfName}>
+                                {s.label} – {s.sublabel} – Perner.Experience Praha Karlín
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </section>
     );
 };
