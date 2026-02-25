@@ -5,14 +5,14 @@ const Gallery = () => {
     const [selectedIdx, setSelectedIdx] = useState(null);
 
     const images = [
-        { jpg: '/assets/gallery/PK8_Event1.jpg', webp: '/assets/gallery/PK8_Event1.webp', alt: 'Perner Hall – event 1' },
-        { jpg: '/assets/gallery/PK8_Event2.jpg', webp: '/assets/gallery/PK8_Event2.webp', alt: 'Perner Hall – event 2' },
-        { jpg: '/assets/gallery/PK8_Event3.jpg', webp: '/assets/gallery/PK8_Event3.webp', alt: 'Perner Hall – event 3' },
-        { jpg: '/assets/gallery/PK8_Event4.jpg', webp: '/assets/gallery/PK8_Event4.webp', alt: 'Perner Hall – event 4' },
-        { jpg: '/assets/gallery/PK8_Event5.jpg', webp: '/assets/gallery/PK8_Event5.webp', alt: 'Perner Hall – event 5' },
-        { jpg: '/assets/gallery/PK8_Event6.jpg', webp: '/assets/gallery/PK8_Event6.webp', alt: 'Perner Hall – event 6' },
-        { jpg: '/assets/gallery/PK8_Event7.jpg', webp: '/assets/gallery/PK8_Event7.webp', alt: 'Perner Hall – event 7' },
-        { jpg: '/assets/gallery/PK8_Event8.jpg', webp: '/assets/gallery/PK8_Event8.webp', alt: 'Perner Hall – event 8' },
+        { jpg: '/assets/gallery/PK8_Event1.jpg', webp: '/assets/gallery/PK8_Event1.webp', alt: 'Perner.Hall eventový prostor s názvem Perner.Hall v Perner.Karlín' },
+        { jpg: '/assets/gallery/PK8_Event2.jpg', webp: '/assets/gallery/PK8_Event2.webp', alt: 'Perner.Kafe kavárna v lobby Perner.Karlín' },
+        { jpg: '/assets/gallery/PK8_Event3.jpg', webp: '/assets/gallery/PK8_Event3.webp', alt: 'Perner.Klub eventový prostor v Perner.Karlín' },
+        { jpg: '/assets/gallery/PK8_Event4.jpg', webp: '/assets/gallery/PK8_Event4.webp', alt: 'Perner.Central eventový prostor s kuchyní v Perner.Karlín' },
+        { jpg: '/assets/gallery/PK8_Event5.jpg', webp: '/assets/gallery/PK8_Event5.webp', alt: 'Perner.Klub2 eventový klubový prostor v Perner.Karlín' },
+        { jpg: '/assets/gallery/PK8_Event6.jpg', webp: '/assets/gallery/PK8_Event6.webp', alt: 'Perner.Hall1 nadrozměrný eventový sál v Perner.Karlín' },
+        { jpg: '/assets/gallery/PK8_Event7.jpg', webp: '/assets/gallery/PK8_Event7.webp', alt: 'Perner.Hall2 prostorný eventový prostor v Perner.Karlín' },
+        { jpg: '/assets/gallery/PK8_Event8.jpg', webp: '/assets/gallery/PK8_Event8.webp', alt: 'Perner.Hall3 prostor pro eventy v Perner.Karlín' },
     ];
 
     const prev = useCallback(() => setSelectedIdx(i => (i - 1 + images.length) % images.length), [images.length]);
