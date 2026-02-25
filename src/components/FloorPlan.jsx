@@ -1,61 +1,17 @@
 import React, { useState } from 'react';
 import './FloorPlan.css';
+import PdfViewer from './PdfViewer';
 
 const setups = [
-    {
-        slug: 'setup-a1-b2',
-        label: 'Setup A1 + B2',
-        pdf: '/assets/space-plans/setup-a1-b2.pdf',
-        alt: 'Eventový prostor Praha Karlín – Setup A1+B2, sálové uspořádání pro konference a firemní akce, PernerKarlín',
-    },
-    {
-        slug: 'setup-a2-b3',
-        label: 'Setup A2 + B3',
-        pdf: '/assets/space-plans/setup-a2-b3.pdf',
-        alt: 'Pronájem eventového sálu Praha – Setup A2+B3, banketové uspořádání, PernerKarlín Pernerova',
-    },
-    {
-        slug: 'setup-a3',
-        label: 'Setup A3',
-        pdf: '/assets/space-plans/setup-a3.pdf',
-        alt: 'Eventový prostor Karlín Praha – Setup A3, cocktail party uspořádání až 700 hostů, Scott Weber',
-    },
-    {
-        slug: 'setup-a4',
-        label: 'Setup A4',
-        pdf: '/assets/space-plans/setup-a4.pdf',
-        alt: 'Firemní akce Praha Karlín – Setup A4, divadelní uspořádání, pronájem sálu PernerKarlín',
-    },
-    {
-        slug: 'setup-a5-b5',
-        label: 'Setup A5 + B5',
-        pdf: '/assets/space-plans/setup-a5-b5.pdf',
-        alt: 'Konference Praha Karlín – Setup A5+B5, hybridní event prostory, PernerKarlín Scott Weber Workspace',
-    },
-    {
-        slug: 'setup-a6-b2',
-        label: 'Setup A6 + B2',
-        pdf: '/assets/space-plans/setup-a6-b2.pdf',
-        alt: 'Teambuilding a workshopy Praha – Setup A6+B2, flexibilní uspořádání sálu, Pernerova 8 Karlín',
-    },
-    {
-        slug: 'setup-c1',
-        label: 'Setup C1',
-        pdf: '/assets/space-plans/setup-c1.pdf',
-        alt: 'Pronájem sálu Praha Karlín – Setup C1, gala dinner a večerní akce, PernerKarlín eventový prostor',
-    },
-    {
-        slug: 'setup-c2',
-        label: 'Setup C2',
-        pdf: '/assets/space-plans/setup-c2.pdf',
-        alt: 'Event venue Praha – Setup C2, produktové launche a prezentace, PernerKarlín Pernerova Karlín',
-    },
-    {
-        slug: 'setup-c3',
-        label: 'Setup C3',
-        pdf: '/assets/space-plans/setup-c3.pdf',
-        alt: 'Firemní večírek Praha Karlín – Setup C3, standing party uspořádání, Scott Weber PernerKarlín',
-    },
+    { slug: 'setup-a1-b2', label: 'Setup A1 + B2', alt: 'Eventový prostor Praha Karlín – Setup A1+B2, sálové uspořádání pro konference a firemní akce, PernerKarlín' },
+    { slug: 'setup-a2-b3', label: 'Setup A2 + B3', alt: 'Pronájem eventového sálu Praha – Setup A2+B3, banketové uspořádání, PernerKarlín Pernerova' },
+    { slug: 'setup-a3',    label: 'Setup A3',       alt: 'Eventový prostor Karlín Praha – Setup A3, cocktail party uspořádání až 700 hostů, Scott Weber' },
+    { slug: 'setup-a4',    label: 'Setup A4',       alt: 'Firemní akce Praha Karlín – Setup A4, divadelní uspořádání, pronájem sálu PernerKarlín' },
+    { slug: 'setup-a5-b5', label: 'Setup A5 + B5', alt: 'Konference Praha Karlín – Setup A5+B5, hybridní event prostory, PernerKarlín Scott Weber Workspace' },
+    { slug: 'setup-a6-b2', label: 'Setup A6 + B2', alt: 'Teambuilding a workshopy Praha – Setup A6+B2, flexibilní uspořádání sálu, Pernerova 8 Karlín' },
+    { slug: 'setup-c1',    label: 'Setup C1',       alt: 'Pronájem sálu Praha Karlín – Setup C1, gala dinner a večerní akce, PernerKarlín eventový prostor' },
+    { slug: 'setup-c2',    label: 'Setup C2',       alt: 'Event venue Praha – Setup C2, produktové launche a prezentace, PernerKarlín Pernerova Karlín' },
+    { slug: 'setup-c3',    label: 'Setup C3',       alt: 'Firemní večírek Praha Karlín – Setup C3, standing party uspořádání, Scott Weber PernerKarlín' },
 ];
 
 const FloorPlan = () => {
@@ -120,20 +76,18 @@ const FloorPlan = () => {
                             </div>
                             <div className="setup-card__body">
                                 <span className="setup-card__label">{s.label}</span>
-                                <a
-                                    href={s.pdf}
-                                    download
-                                    className="setup-card__download"
-                                    aria-label={`Stáhnout PDF – ${s.label}`}
-                                >
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                                    Stáhnout PDF
-                                </a>
                             </div>
                         </article>
                     ))}
                 </div>
             </div>
+
+                {/* PDF Viewer */}
+                <PdfViewer
+                    file="/assets/pdf/PernerKarlin_varianty_usporadani.pdf"
+                    downloadUrl="/assets/pdf/PernerKarlin_varianty_usporadani.pdf"
+                    title="Varianty uspořádání – kompletní přehled"
+                />
 
             {/* Lightbox */}
             {lightbox && (
