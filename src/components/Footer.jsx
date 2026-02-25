@@ -149,18 +149,18 @@ const Footer = () => {
                         {/* Info + map */}
                         <div className="contact__info">
                             <div className="contact__block">
-                                <h4>Kontaktní osoba</h4>
+                                <h3>Kontaktní osoba</h3>
                                 <p><strong style={{ color: 'var(--clr-text)' }}>Petr Svoboda</strong><br />
                                     Head of Event Sales & Production<br />
                                     <a href="mailto:svoboda@scottweber.cz">svoboda@scottweber.cz</a><br />
                                     <a href="tel:+420724286796">+420 724 286 796</a></p>
                             </div>
                             <div className="contact__block">
-                                <h4>Lokalita</h4>
+                                <h3>Lokalita</h3>
                                 <p>PernerKarlín<br />Pernerova 727/40a<br />186 00 Praha – Karlín</p>
                             </div>
                             <div className="contact__block">
-                                <h4>MHD</h4>
+                                <h3>MHD</h3>
                                 <p>Metro C – stanice <strong style={{ color: 'var(--clr-text)' }}>Křižíkova</strong> (3 min pěšky)<br />
                                     Tram 8, 14 – zastávka <strong style={{ color: 'var(--clr-text)' }}>Křižíkova</strong></p>
                             </div>

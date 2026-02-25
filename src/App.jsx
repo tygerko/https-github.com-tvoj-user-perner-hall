@@ -9,6 +9,7 @@ import UseCases from './components/UseCases';
 import Gallery from './components/Gallery';
 import Footer from './components/Footer';
 import BookingModal from './components/BookingModal';
+import ExitIntentPopup from './components/ExitIntentPopup';
 import './index.css';
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
       </main>
       <Footer />
       <BookingModal isOpen={isModalOpen} onClose={closeModal} />
+      <ExitIntentPopup />
     </div>
   );
 }
