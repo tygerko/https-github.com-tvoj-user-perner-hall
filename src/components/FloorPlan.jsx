@@ -9,7 +9,7 @@ const slides = [
         alt: 'Celkový 3D půdorys eventového prostoru Perner.Experience Praha Karlín – přehled všech sálů, Perner.Hall, Perner.Central, Perner.Klub, Perner.Kino, Perner.Garden',
         pdf: '/assets/pdf/perner-karlin-varianty-usporadani.pdf',
         pdfName: 'perner-karlin-varianty-usporadani.pdf',
-        pdfLabel: 'Stáhnout kompletní plán',
+        pdfLabel: 'Stáhnout PDF',
     },
     {
         img: '/assets/space-plans/thumbs/setup-a1-b2.jpg',
