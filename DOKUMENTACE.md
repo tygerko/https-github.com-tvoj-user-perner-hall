@@ -1,8 +1,9 @@
 # Dokumentace projektu: Perner.Experience
 
 **Klient:** Scott.Weber Workspace
-**URL produkce:** `https://scottweber.cz/pernerexperience`
-**Repozitář:** GitHub – `claude/upbeat-nightingale` → `main`
+**URL produkce (FTP):** `https://scottweber.cz/pernerexperience`
+**URL staging (Vercel):** `https://https-github-com-tvoj-user-perner-h.vercel.app/`
+**Repozitář:** GitHub – větev `main`
 **Verze:** 1.0 (únor 2026)
 
 ---
@@ -66,16 +67,24 @@ Protože jde o **Single Page Application (SPA)**, musí server přesměrovávat 
 </IfModule>
 ```
 
-### Base path ve Vite
+### Base path ve Vite – DŮLEŽITÉ
 
-Zkontrolovat `vite.config.js` – musí být nastaveno:
+V souboru `vite.config.js` je řádek s `base` jako **komentář**:
+
+```js
+// base: '/pernerexperience/', // ← odkomentovat LEN pro FTP build, ne pro Vercel
+```
+
+**Před FTP buildem je nutné tento řádek odkomentovat**, jinak budou všechny cesty k assetům broken v podsložce:
+
 ```js
 export default defineConfig({
-  base: '/pernerexperience/',
+  base: '/pernerexperience/',   // ← odkomentovat před npm run build
   // ...
 })
 ```
-Pokud `base` není nastaveno, všechny cesty k assetům budou broken po nasazení do podsložky.
+
+Po buildu a nahrání na FTP řádek opět zakomentovat (jinak se rozbije Vercel staging).
 
 ---
 
